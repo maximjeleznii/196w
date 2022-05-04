@@ -1,5 +1,106 @@
-.background {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../images/bg.jpg");
+body {
+    margin: 0;
 }
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-color: #01321f;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1320px;
+    margin: auto auto;
+    background-color: #222629;
+    color: white;
+}
+
+@media screen and (max-width:1399px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.banner {
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+}
+
+.banner-content {
+    padding: 100px 200px;
+    width: fit-content;
+    margin: 40px auto 0px auto;   
+    background-color: rgba(34, 38, 41, 0.5)
+}
+
+.nav {
+    display: flex;
+    border-bottom: 2px solid #86c232;
+}
+
+.nav-button {
+    background-color: #474b4f;
+    border: 2px solid #86c232;
+    margin: 0 5px;
+    border-bottom: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #222629;
+    border-color: #61892f;
+}
+
+.content {
+    margin: 20px;
+}
+
+hr {
+    color: #86c232;
+}
+
+a {
+    color: #86c232;
+}
+
+a:hover, a:active, a:visited {
+    color: #61892f;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+
