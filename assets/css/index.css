@@ -83,6 +83,19 @@ body {
     margin: 20px;
 }
 
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+fieldset {
+    width: fit-content;
+    border-color: #86c232;
+}
+
 hr {
     color: #86c232;
 }
@@ -94,13 +107,4 @@ a {
 a:hover, a:active, a:visited {
     color: #61892f;
 }
-
-.tab {
-    display: none;
-}
-
-.tab.active {
-    display: block;
-}
-
 

@@ -1,13 +1,23 @@
+window.addEventListener("load", function() {
+    id = this.location.hash.substring(1);
+    tabAction(id);
+});
+
+window.addEventListener('hashchange', function() {
+    id = this.location.hash.substring(1);
+    tabAction(id);
+}, false);
+
 function tabSelect(id) {
     this.location.hash = id;
 }
 
-window.addEventListener('hashchange', function() {
-    var tabs = ["a-3", "a-4", "a-5"];
-    id = this.location.hash.substring(1);
+function tabAction(id) {
+    const tabs = ["a-3", "a-4", "a-5"];
     if(tabs.includes(id)) {
+        document.title = "196W " + id.toUpperCase();
         Array.from(document.getElementsByClassName("nav-button")).forEach(element => {
-            if(id+"-btn" == element.id) {
+            if(id + "-btn" == element.id) {
                 if(!element.classList.contains("active")) {
                     element.classList.add("active");
                 }
@@ -29,4 +39,4 @@ window.addEventListener('hashchange', function() {
             }
         });
     }
-}, false);
+}
